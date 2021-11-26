@@ -1,0 +1,58 @@
+
+
+.box{
+    text-align: center;
+    padding: 20px;font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #FF5A05;  
+} 
+
+.box2{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+
+/* Type@39 */
+
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 130%;
+/* or 51px */
+
+
+
+color: #05000B;
+
+}
+
+.big{
+    display: flex;   
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(5, 0, 11, 0.1);
+    border-radius: 5px;
+    width: 60%;
+    margin: 50px auto;
+    input{
+        border: none;
+        background-color: #FDEEE7;
+        width: 100%;
+    }
+}
+
+.newsletter-box {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    margin: 50px auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+

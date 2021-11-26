@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+}
+
+#companies {
+  .container {
+    padding: 100px;
+  }
+  .row {
+    gap: 30px;
+    > div {
+      background: #FFFFFF;
+      box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 17px 48px;
+      width: 260px;
+    }
+  }
+}
+
+#solutions {
+  .col-left {
+    position: relative;
+    > img {
+      width: 70%;
+    }
+
+    .legend {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      overflow: visible;
+      padding: 15px 15px 15px 100px;
+      border-radius: 7.69px;
+      top: 160px;
+      right: 80px;
+      background-color: white;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      span:first-of-type {
+        margin-right: 38px;
+        color: #3C3C4399;
+      }
+      span:last-of-type {
+        color: #7459D9;
+      }
+      .legend-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: inline;
+        background-color: white;
+        position: absolute;
+        left: 10px;
+        display: grid;
+        place-items: center;
+      }
+    }
+
+    .transaction {
+      width: 390px;
+      position: absolute;
+      top: 250px;
+      right: 30px;
+      background-color: white;
+      padding: 20px 20px 30px;
+      box-shadow: 20px 30px 70px rgba(3, 7, 37, 0.06);
+      border-radius: 10px;
+
+      .transaction-title {
+        color: #404040;
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #404040;
+      }
+
+      img:hover, a:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
+      img[src="./img/plus.png"] {
+        margin-top: -20px;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      input {
+        min-width: 60%;
+        font-size: 20px;
+        padding: 3px 10px;
+        outline: none;
+        border: 1px solid #1F37FF;
+        border-radius: 8px;
+      }
+
+      button {
+        font-size: 10px;
+        min-width: 35%;
+        border-radius: 4px;
+        background-color: #FF5A05;
+        color: white;
+        outline: none;
+        border: none;
+        padding: 11px 13px;
+      }
+    }
+  }
+
+  .col-right {
+    p:first-child {
+      color: #FF5A05;
+      font-size: 17px;
+    }
+
+    h1 {
+      font-size: 49px;
+      font-weight: 700px;
+    }
+
+    h1 + p {
+      color: #05000B;
+      width: 80%;
+      margin: 25px 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      gap: 40px;
+      margin-bottom: 35px;
+
+      li {
+        font-weight: bold;
+        img {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    button {
+      background-color: #FF5A05;
+      color: white;
+      padding: 15px 30px !important;
+      border-radius: 4px;
+      outline: none;
+      border: none;
+    }
+  }
+}
+
+#stats {
+  .container {
+    padding: 200px 100px 100px;
+    position: relative;
+    overflow: hidden;
+    > img {
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+
+      &.left-bg {
+        left: 10px;
+        top: 450px;
+      }
+
+      &.right-bg {
+        right: 10px;
+      }
+    }
+
+    .stat-box {
+      position: relative;
+      min-width: 260px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+      svg {
+        fill:white;
+        filter: drop-shadow(rgba(17, 17, 26, 0.1) 0px 0px 16px);
+        
+      }
+      .stat-content {
+        position: absolute;
+        text-align: center;
+        color: #05000B;
+        margin-top: -40px;
+        .content-num {
+          font-size: 55px;
+          color: #1F37FF;
+          margin-bottom: 0px;
+        }
+      }
+    }
+    
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #solutions {
+
+    .col-left {
+      > img {
+        width: 100%;
+      }
+    }
+
+    .col-right {
+      margin-top: 40px;
+      h1 + p {
+        width: 100%;
+      }
+
+      ul {
+        justify-content: center;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #solutions {
+    padding: 10px;
+    .col-right {
+
+      ul {
+        justify-content: flex-start;
+      }
+    }
+
+    .col-left {
+      .legend, .transaction {
+        position: static;
+        margin: 40px auto;
+        width: 100%;
+        form {
+          flex-wrap: wrap;
+        }
+
+        input {
+          width: 100%;
+        }
+
+        button {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
